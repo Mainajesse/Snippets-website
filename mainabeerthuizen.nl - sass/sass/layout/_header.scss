@@ -1,0 +1,82 @@
+.header {
+  font-size: 6.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-900) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-550) {
+    font-size: 4rem;
+  }
+
+  &__image {
+    background-image: linear-gradient(to right bottom,
+        rgba($color-primary, 1),
+        rgba($color-black, 0.2)),
+      url(../../images/background-light.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+
+  }
+
+  &__primary-title {
+    @include translate-50-50;
+    width: 90%;
+    top: 30%;
+
+    @media only screen and (max-width: $bp-450) {
+      font-size: 3.5rem;
+    }
+  }
+
+
+  &__secondary-title {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+    @include translate-50-50;
+    width: 90%;
+    top: 40%;
+
+    @media only screen and (max-width: $bp-900) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-550) {
+      font-size: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-450) {
+      font-size: 2.5rem;
+
+    }
+  }
+
+  .light-btn {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    @include translate-50-50;
+    top: 55%;
+    padding: 0.5rem 3rem;
+    width: 100%;
+  }
+}
+
+.dark-theme {
+  .header {
+    &__image {
+      background-image: linear-gradient(to right bottom,
+          rgba($color-black, 1),
+          rgba($color-secondary, 0.2)),
+        url(../../images/background-dark.jpg);
+    }
+  }
+}

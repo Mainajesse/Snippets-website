@@ -1,0 +1,81 @@
+.footer {
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: $color-primary;
+  padding-bottom: 3rem;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+
+
+  &__title {
+    color: white;
+    margin: 15rem 2rem 0rem 2rem;
+    text-align: center;
+
+    &:before {
+      position: absolute;
+      top: 40%;
+      display: block;
+      width: 20%;
+      border-bottom: 5px solid $color-white;
+      content: "";
+      left: 0;
+
+      @media only screen and (max-width: $bp-750) {
+        width: 10%;
+      }
+
+      @media only screen and (max-width: $bp-550) {
+        display: none;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 40%;
+      display: block;
+      width: 20%;
+      border-bottom: 5px solid $color-white;
+      content: "";
+      right: 0;
+
+      @media only screen and (max-width: $bp-750) {
+        width: 10%;
+      }
+
+      @media only screen and (max-width: $bp-550) {
+        display: none;
+      }
+    }
+  }
+
+  & p {
+    margin: 0rem 2rem 0rem 2rem;
+    text-align: center;
+  }
+
+  &__icons {
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+
+    &--linkedin,
+    &--github,
+    &--email {
+      padding: 2rem;
+    }
+  }
+}
+
+.dark-theme {
+  .footer {
+    background-color: $color-secondary-dark;
+
+    &__btn:hover {
+      color: $color-secondary;
+    }
+  }
+}

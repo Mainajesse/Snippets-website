@@ -1,0 +1,26 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  margin: 2rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  position: relative;
+  width: 50%;
+
+  @media only screen and (max-width: $bp-750) {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
+
+.dark-theme {
+  .card {
+    background-color: rgb(41, 40, 40);
+  }
+}

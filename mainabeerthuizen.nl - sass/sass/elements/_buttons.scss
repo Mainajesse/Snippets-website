@@ -1,0 +1,197 @@
+/*LIGHT/DARKMODE SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  @include translate-50-50;
+  top: 60%;
+
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.darkSwitchMenu {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 102%;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+input:checked+.slider {
+  background-color: $color-secondary;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px $color-grey-dark;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+
+  &:before {
+    border-radius: 50%;
+  }
+}
+
+/*END LIGHT/DARKMODE SWITCH */
+
+
+/*ABOUT ME BTN */
+.about-me {
+  &__btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-primary;
+    line-height: 1.3;
+    padding: 1rem 2rem;
+    border: 2px solid $color-primary;
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+      transform: translateY(0) scale(1.03);
+    }
+  }
+}
+
+.dark-theme {
+  .about-me {
+    &__btn {
+      border: 2px solid $color-secondary;
+
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+/*END ABOUT ME BTN */
+
+/*WORKFLOW BTN */
+.information {
+  &__btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid $color-primary;
+    display: block;
+    margin-top: 2rem;
+    text-decoration: none;
+  }
+}
+
+.github {
+  border: 2px solid $color-primary;
+
+  &:hover {
+    background-color: $color-primary;
+  }
+}
+
+.pdf {
+  border: 2px solid #color-primary;
+  position: absolute;
+  bottom: 25px;
+  width: 90%;
+
+  @media only screen and (max-width: $bp-750) {
+    position: relative;
+    margin-top: 4rem;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+  }
+}
+
+.dark-theme {
+  .github {
+    border: 2px solid $color-secondary;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+
+  .pdf {
+    border: 2px solid $color-secondary;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+}
+
+/*END WORKFLOW BTN */
+
+/*FOOTER BTN */
+
+.footer {
+  &__btn {
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border: 2px solid $color-white;
+    display: block;
+    margin: 2rem 0rem 2rem 0rem;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+      transform: translateY(0) scale(1.03);
+    }
+  }
+}
+
+/*END FOOTER BTN */
