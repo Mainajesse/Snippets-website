@@ -16,16 +16,8 @@ body {
 
 .container {
   margin: 0 auto;
-}
-
-section {
-  display: flex;
-  justify-content: space-evenly;
+  max-width: 1400px;
   padding: 0rem 10rem 0rem 10rem;
-
-  @media only screen and (max-width: $bp-1200) {
-    justify-content: space-between;
-  }
 
   @media only screen and (max-width: $bp-900) {
     padding: 0rem 5rem 0rem 5rem;
@@ -35,6 +27,31 @@ section {
     padding: 0rem 2.5rem 0rem 2.5rem;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.wrapper {
+  max-width: 1400px;
+}
+
+// section {
+//   display: flex;
+//   justify-content: space-evenly;
+
+//   @media only screen and (max-width: $bp-1200) {
+//     justify-content: space-between;
+//   }
+
+//   @media only screen and (max-width: $bp-900) {
+//     padding: 0rem 5rem 0rem 5rem;
+//   }
+
+//   @media only screen and (max-width: $bp-550) {
+//     padding: 0rem 2.5rem 0rem 2.5rem;
+//   }
+// }
 
 section.skillsets {
   margin: 0 auto;

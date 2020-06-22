@@ -72,21 +72,10 @@
   }
 }
 
-.green>span {
-  background-color: #00b144e3;
+.color>span {
+  background-color: $color-white;
 }
 
-.orange>span {
-  background-color: #f77a15;
-}
-
-.light-green>span {
-  background-color: #52df00e3;
-}
-
-.red>span {
-  background-color: #ff3706e3;
-}
 
 .nostripes>span>span,
 .nostripes>span:after {

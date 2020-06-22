@@ -73,21 +73,19 @@ input:checked+.slider:before {
 
 /*END LIGHT/DARKMODE SWITCH */
 
-
 /*ABOUT ME BTN */
 .about-me {
   &__btn {
     font-size: 1.6rem;
     font-weight: 700;
     text-decoration: none;
-    text-transform: uppercase;
     text-align: center;
     color: $color-primary;
     line-height: 1.3;
     padding: 1rem 2rem;
     border: 2px solid $color-primary;
     display: block;
-    width: 100%;
+    width: 50%;
     margin-top: 2rem;
 
     &:hover {
@@ -116,7 +114,8 @@ input:checked+.slider:before {
 /*END ABOUT ME BTN */
 
 /*WORKFLOW BTN */
-.information {
+.information,
+.portfolio {
   &__btn {
     padding: 0.5rem 1rem;
     border: 2px solid $color-primary;
@@ -151,16 +150,8 @@ input:checked+.slider:before {
 }
 
 .dark-theme {
-  .github {
-    border: 2px solid $color-secondary;
-    color: $color-white;
 
-    &:hover {
-      background-color: $color-secondary;
-      color: $color-white;
-    }
-  }
-
+  .github,
   .pdf {
     border: 2px solid $color-secondary;
     color: $color-white;
@@ -179,7 +170,7 @@ input:checked+.slider:before {
 .footer {
   &__btn {
     font-weight: 700;
-    padding: 1rem 2rem;
+    padding: 0.7rem 5rem;
     border: 2px solid $color-white;
     display: block;
     margin: 2rem 0rem 2rem 0rem;
